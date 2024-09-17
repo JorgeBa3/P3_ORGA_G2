@@ -1,0 +1,73 @@
+# Laboratorio de Organizacion Computacional
+
+# Grupo #3 
+
+| Nombre |Carnet|Trabajado|  
+|--|--|--|
+| Jorge Alejandro De Leon Batres | 202111277 | 100% |
+| Roberto Miguel Garcia Santizo  | 202201724 | 100% |
+| Jose Javier Bonilla Salazar    | 202200035 | 100%|
+| Fredy Alexander Esteban Pineda | 202110511 |100%|
+
+
+# Introducción
+El hotel “Grand Tikal Futura” esta pensando en realizar una torre de parqueos similar al que tiene su competencia de Miraflores, por lo cual se le solicito a usted y su equipo de organización computacional para realizar un prototipo de dicha torre de parqueos el cual se dispondrá de 3 niveles para dicho prototipo.
+
+
+# Descripcion del problema
+ - En la entrada del parqueo tenga una garita automática en el cual se pueda extraer un ticket, posteriormente se levante la barra para que pueda pasar el vehículo.
+ - Deberá llevar el conteo de vehículos que hay en la torre, así como el conteo de carros que hay por nivel.
+ - Cada nivel tendrá un amento de estacionamientos empezando con el primer nivel el cual tendrá 3 estacionamientos, el segundo nivel 4 y el tercero 5 estacionamientos.
+ - Se debe de tomar en cuenta que al momento que cuando un nivel se quede sin estacionamientos deberá de indicar que pase al siguiente nivel y cuando ya no haya estacionamientos se cierre la torre y encienda una luz roja.
+ - El vehículo tendrá 20 segundos para poder pasar por la garita posteriormente la garita bajará la barra para que no pase dicho vehículo.
+ - Para salir el vehículo deberá de ingresar la contraseña ubicada en el ticket por la garita el cual si es correcto subirá la barra para que pueda retirarse, si fuera incorrecta deberá de cerrar el parqueo y activar la alarma de robo la cual se desactivara por medio de la garita de salida.
+
+# Proceso teorico
+El **74LS107** es un flip-flop JK dual, que tiene dos flip-flops JK independientes con **clear asincrónico**. Los flip-flops JK son dispositivos de almacenamiento que cambian su estado de salida en respuesta a una señal de reloj y a las entradas **J** y **K**.
+### Características principales del 74LS107:
+
+-   **Flip-flop JK dual**: Incluye dos flip-flops JK dentro del mismo chip.
+-   **Entrada de clear asincrónico**: Permite poner la salida en cero independientemente de las señales de reloj o las entradas J y K.
+-   **Entradas J y K**: Controlan el comportamiento de cada flip-flop.
+-   **Entrada de reloj (CLK)**: Sincroniza los cambios de estado de salida.
+
+### Función del flip-flop JK en el 74LS107:
+
+El funcionamiento básico de un flip-flop JK depende del estado de las entradas **J** y **K** junto con el pulso de reloj (CLK):
+
+1.  **J = 0, K = 0**: No hay cambio en la salida (el estado anterior se conserva).
+2.  **J = 0, K = 1**: La salida se restablece a **0** (reset).
+3.  **J = 1, K = 0**: La salida se establece a **1** (set).
+4.  **J = 1, K = 1**: La salida cambia al valor opuesto (toggle o conmutación).
+
+El flip-flop actúa en los flancos de bajada del pulso del reloj (**borde negativo**). Esto significa que el cambio de estado de salida ocurre cuando el reloj pasa de un nivel alto a un nivel bajo.
+
+# Diagramas
+![enter image description here](https://github.com/JorgeBa3/-P3_ORGA_G2/blob/main/Planos/Contador.png)
+
+![enter image description here](https://github.com/JorgeBa3/-P3_ORGA_G2/blob/main/Planos/Contador15.png)
+
+# Equipo utilizado
+
+## Ardruino
+![enter image description here](https://github.com/JorgeBa3/-P3_ORGA_G2/blob/main/Materiales/Arduino.jpg)
+
+## Sensores
+![enter image description here](https://github.com/JorgeBa3/-P3_ORGA_G2/blob/main/Materiales/Sensores.jpg)
+
+## Contador
+![enter image description here](https://github.com/JorgeBa3/-P3_ORGA_G2/blob/main/Materiales/Contador.jpg)
+
+# Gastos
+
+Gasto Total: Q800
+
+# Gastos Individuales
+
+ - Jorge Batres: Q200
+ - Roberte Garcia: Q200
+ - Javie Bonilla: Q200
+ - Fredy Esteban: Q200
+
+# Conclusiones
+El proyecto para la torre de parqueos del hotel "Grand Tikal Futura" combina **lógica combinacional y secuencial** para automatizar el control del acceso, el conteo de vehículos y la seguridad del parqueo. Mediante flip-flops, sensores y mecanismos como servomotores y puentes H, se gestiona eficientemente el sistema, sin depender de microcontroladores en ciertas áreas clave. Este diseño permite aplicar conocimientos teóricos en un contexto práctico, optimizando el uso de dispositivos y garantizando un sistema funcional y seguro. 
